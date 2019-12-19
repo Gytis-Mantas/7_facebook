@@ -14,7 +14,7 @@ function renderFeed( list ) {
 
 function renderPost( data ) {
     let HTML = `<div class="post">
-                    ${renderPostHeader( data )}
+                    ${renderPostHeader(data)}
                     ${renderPostContent( data.content )}
                     ${renderPostFooter()}
                 </div>`;
@@ -24,7 +24,10 @@ function renderPost( data ) {
 }
 
 function renderPostHeader() {
-    return '<header>POST HEADER</header>';
+    return `<header>
+        <img src = "./img/face.png" alt="User photo">
+            
+    </header>`;
 }
 
 function renderPostContent() {
