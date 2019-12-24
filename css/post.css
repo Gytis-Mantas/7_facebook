@@ -59,7 +59,7 @@
 .post > .content {
     display: inline-block;
     width: 100%;
-
+    padding: 10px;
 }
 .post > footer {
     display: inline-block;

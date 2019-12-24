@@ -24,8 +24,6 @@ function renderPost( data ) {
 }
 
 function renderPostHeader( data ) {
-    console.log(data);
-    
     return `<header>
         <a herf="#" class="user-image">
             <img src ="./img/users/${data.author.img}" alt="user face">
@@ -40,8 +38,22 @@ function renderPostHeader( data ) {
     </header>`;
 }
 
-function renderPostContent() {
-    return '<div class="content">POST CONTENT</div>';
+function renderPostContent( content ) {
+    console.log ( content );
+    let textHTML = '';
+    let galleryHTML = '';
+
+    if(content.text) {
+        textHTML = content.text
+    }
+    if(content.img) {
+        galleryHTML = renderGallery( content.img )
+    }
+
+    return `<div class="content">
+                ${textHTML}
+                ${galleryHTML}
+            </div>`;
 }
 
 function renderPostFooter() {
@@ -69,4 +81,12 @@ function renderPostFooter() {
                     </form>
                 </div>    
             </footer>`;
-} 
+}
+function renderGallery( list ){
+    let HTML = ''
+        for ( let i = 0; i<list.length; i++){
+            HTML += `<img src= "./img/posts/${list[i]}">`
+        }
+
+    return HTML
+}
