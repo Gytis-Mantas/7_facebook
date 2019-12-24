@@ -3,12 +3,12 @@
 const posts = [
     // {
     //     author: {
-    //         name: 'John',
-    //         surname: 'Dear',
-    //         img: 'john-dear.jpg',
+    //         name: 'Vardenis',
+    //         surname: 'Pavardenis',
+    //         img: 'vardenis-pavardenis.jpg',
     //         link: '#'
     //     },
-    //     time: 1559846846,
+    //     time: 155984684689,
     //     content: {
     //         text: 'Lorem ipsum dolor sit amet...',
     //         background: 'red',
