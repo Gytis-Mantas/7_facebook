@@ -17,9 +17,9 @@ const posts = [
     // },
     {
         author: {
-            name: 'John',
-            surname: 'Dear',
-            img: 'john-dear.jpg',
+            name: 'Agnė',
+            surname: 'Agnietė',
+            img: 'ag.jpg',
             link: '#'
         },
         time: 1576592401104,
@@ -29,21 +29,21 @@ const posts = [
     },
     {
         author: {
-            name: 'John',
-            surname: 'Dear',
-            img: 'john-dear.jpg',
+            name: 'Alfonsas',
+            surname: 'Alfonietis',
+            img: 'al.jpg',
             link: '#'
         },
         time: 1576592401104,
         content: {
-            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis.'
+            text: 'Kalbėsime apie gyvenimo aprašymo rengimą, formalios ir neformalios socialinės medijos panaudojimą darbo paieškose, dalyvavimą darbo pokalbiuose, darbdavių keliamus lūkesčius bei rinkoje vyraujančias tendencijas, darbo užmokesčio rėžius. Aptarsime dažniausiai pasikartojančias klaidas darbo paieškos metu bei pasidalinsime patarimais, kaip jų išvengti. Paliesime svarbiausius aspektus, kuriant savo profesinį profilį, tiek bendrai, tiek konkrečiai IT rinkai.'
         }
     },
     {
         author: {
-            name: 'John',
-            surname: 'Dear',
-            img: 'john-dear.jpg',
+            name: 'Antanas',
+            surname: 'Antanavičius',
+            img: 'an.jpg',
             link: '#'
         },
         time: 1576592401104,
@@ -54,9 +54,9 @@ const posts = [
     },
     {
         author: {
-            name: 'John',
-            surname: 'Dear',
-            img: 'john-dear.jpg',
+            name: 'Ilgas',
+            surname: 'Ilginis',
+            img: 'il.jpg',
             link: '#'
         },
         time: 1576592401104,
@@ -67,9 +67,9 @@ const posts = [
     },
     {
         author: {
-            name: 'John',
-            surname: 'Dear',
-            img: 'john-dear.jpg',
+            name: 'Jonas',
+            surname: 'Jonaitis',
+            img: 'jo.jpg',
             link: '#'
         },
         time: 1576592401104,
@@ -80,9 +80,9 @@ const posts = [
     },
     {
         author: {
-            name: 'John',
-            surname: 'Dear',
-            img: 'john-dear.jpg',
+            name: 'Keistas',
+            surname: 'Keistuolis',
+            img: 'ke.jpg',
             link: '#'
         },
         time: 1576592401104,
@@ -93,9 +93,9 @@ const posts = [
     },
     {
         author: {
-            name: 'John',
-            surname: 'Dear',
-            img: 'john-dear.jpg',
+            name: 'Marė',
+            surname: 'Marytė',
+            img: 'ma.jpg',
             link: '#'
         },
         time: 1576592401104,
@@ -106,9 +106,9 @@ const posts = [
     },
     {
         author: {
-            name: 'John',
-            surname: 'Dear',
-            img: 'john-dear.jpg',
+            name: 'Petras',
+            surname: 'Petraitis',
+            img: 'pe.jpg',
             link: '#'
         },
         time: 1576592401104,
@@ -118,9 +118,9 @@ const posts = [
     },
     {
         author: {
-            name: 'John',
-            surname: 'Dear',
-            img: 'john-dear.jpg',
+            name: 'Petriukas',
+            surname: 'Patruškevičius',
+            img: 'pi.jpg',
             link: '#'
         },
         time: 1576592401104,
