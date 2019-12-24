@@ -1,4 +1,4 @@
-"use strict";
+ "use strict";
 
 function renderFeed( list ) {
     if ( Array.isArray(list) === false ) {
@@ -23,17 +23,27 @@ function renderPost( data ) {
     return;
 }
 
-function renderPostHeader() {
+function renderPostHeader( data ) {
+    console.log(data);
+    
     return `<header>
-        <img src = "./img/face.png" alt="User photo">
-            
+        <a herf="#" class="user-image">
+            <img src ="./img/users/${data.author.img}" alt="user face">
+        </a>
+        <div class="texts">
+            <div class="author">
+                <a href="#">${data.author.name} ${data.author.surname}</a>
+            </div>
+            <span class="time">${data.time} </span>
+        </div>
+        <i class="fa fa-ellipsis-h"></i>
     </header>`;
 }
 
 function renderPostContent() {
-    return '<div>POST CONTENT</div>';
+    return '<div class="content">POST CONTENT</div>';
 }
 
 function renderPostFooter() {
     return '<footer>POST FOOTER</footer>';
-}
+} 
