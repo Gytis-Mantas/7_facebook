@@ -24,8 +24,6 @@ function renderPost( data ) {
 }
 
 function renderPostHeader( data ) {
-    console.log(data);
-    
     return `<header>
         <a herf="#" class="user-image">
             <img src ="./img/users/${data.author.img}" alt="user face">
@@ -40,10 +38,55 @@ function renderPostHeader( data ) {
     </header>`;
 }
 
-function renderPostContent() {
-    return '<div class="content">POST CONTENT</div>';
+function renderPostContent( content ) {
+    console.log ( content );
+    let textHTML = '';
+    let galleryHTML = '';
+
+    if(content.text) {
+        textHTML = content.text
+    }
+    if(content.img) {
+        galleryHTML = renderGallery( content.img )
+    }
+
+    return `<div class="content">
+                ${textHTML}
+                ${galleryHTML}
+            </div>`;
 }
 
 function renderPostFooter() {
-    return '<footer>POST FOOTER</footer>';
-} 
+    return `<footer>
+                <div class="row">
+                    <div class="action">
+                        <i class="fa fa-thumbs-o-up"></i>
+                        <span>Like</span>
+                    </div>
+                    <div class="action">
+                        <i class="fa fa-comment-o"></i>
+                        <span>Coment</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <img class="user-photo" src="./img/users/ma.jpg" alt="user face">
+                    <form>
+                        <textarea> </textarea>
+                        <div class="actions">
+                            <i class="fa fa-smile-o"></i>
+                            <i class="fa fa-camera"></i>
+                            <i class="fa fa-picture-o"></i>
+                            <i class="fa fa-sticky-note-o"></i>
+                        </div>
+                    </form>
+                </div>    
+            </footer>`;
+}
+function renderGallery( list ){
+    let HTML = ''
+        for ( let i = 0; i<list.length; i++){
+            HTML += `<img src= "./img/posts/${list[i]}">`
+        }
+
+    return HTML
+}
