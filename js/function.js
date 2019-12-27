@@ -51,7 +51,7 @@ function renderPostContent( content ) {
     }
 
     return `<div class="content">
-                ${textHTML}
+                <p>${textHTML}</p>
                 ${galleryHTML}
             </div>`;
 }
@@ -84,9 +84,38 @@ function renderPostFooter() {
 }
 function renderGallery( list ){
     let HTML = ''
-        for ( let i = 0; i<list.length; i++){
-            HTML += `<img src= "./img/posts/${list[i]}">`
-        }
+    const maxIm = 4
+    const ll = list.length
+    let size = ll
+    if ( ll > maxIm ){ size = maxIm }
+    for ( let i = 0; i < size; i++) {
+        HTML += `<img src="./img/posts/${list[i]}">`;
+    }
+    if (ll > size){
+        HTML += `<div class="overlay">+${ll - size}</div>`
+    }
+    return `<div class="gallery gallery-${size}">${HTML}</div>`;
+} // patogesne, bet ne tokia gera, kaip paskutiniame pavyzdyje
 
-    return HTML
-}
+// veikianti patikrinta galerijos formavimo funkcija, tik neformatuoja foto pagal dydi
+// function renderGallery( list ){
+//     console.log(list)
+//     let HTML = ''
+//         for ( let i = 0; i<list.length; i++){
+//             HTML += `<img src= "./img/posts/${list[i]}">`
+//         }
+
+//     return HTML
+// }
+
+
+// veikianti patikrinta galerijos formavimo funkcija, jau uzdaryta i <div>
+// function renderGallery( list ){
+//     let HTML = '<div class="gallery">';
+//         for ( let i = 0; i<list.length; i++){
+//             HTML += `<img src= "./img/posts/${list[i]}">`
+//         }
+//     HTML +='</div>'    
+//     return HTML
+// }
+
