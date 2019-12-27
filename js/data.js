@@ -62,7 +62,7 @@ const posts = [
         time: 1576592401104,
         content: {
             text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            img: ['img-1.jpg', 'img-2.jpg']
+            img: ['img-5.jpg', 'img-6.jpg']
         }
     },
     {
@@ -75,7 +75,7 @@ const posts = [
         time: 1576592401104,
         content: {
             text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            img: ['img-1.jpg', 'img-2.jpg', 'img-3.jpg']
+            img: ['nature-1.jpg', 'nature-2.jpg', 'nature-3.jpg']
         }
     },
     {
@@ -88,7 +88,7 @@ const posts = [
         time: 1576592401104,
         content: {
             text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            img: ['img-1.jpg', 'img-2.jpg', 'img-3.jpg', 'img-4.jpg']
+            img: ['bac-1.jpg', 'bac-2.jpg', 'bac-3.jpg', 'bac-4.jpg']
         }
     },
     {
@@ -101,7 +101,7 @@ const posts = [
         time: 1576592401104,
         content: {
             text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            img: ['img-1.jpg', 'img-2.jpg', 'img-3.jpg', 'img-4.jpg', 'img-2.jpg', 'img-3.jpg', 'img-4.jpg']
+            img: ['agne.jpg', 'alfonsas.jpg', 'andrius.jpg', 'ilgas.jpg', 'jonas.jpg', 'keistuolis.jpg', 'maryte.jpg', 'petras.jpg', 'petriukas.jpg','plikis.jpg', 'usuotis.jpg']
         }
     },
     {
