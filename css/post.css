@@ -98,10 +98,17 @@
             background-color: #36f;
             color: #fff;
         }
-      .post > .content > p.red {
+        .post > .content > p.red {
             background-color: #f33;
             color: #fff;
         }
+        .post > .content > p > .more {
+            color: #36f;
+            cursor: pointer;
+        }
+            .post > .content > p > .more:hover {
+                text-decoration: underline;
+            }   
 
     .post > .content > .gallery {
         display: inline-block;

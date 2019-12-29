@@ -36,28 +36,11 @@ function renderPostHeader( data ) {
 }
 
 function renderPostContent( content ) {
-    console.log ( content );
     let textHTML = '';
     let galleryHTML = '';
 
-    // if( content.text.length < 61 && !content.img ) {
-    //     textHTML = `<p class="big-text"> ${content.text} </p>`;
-    // } else {
-    //     textHTML = `<p> ${content.text} </p>`;
-    // }   
-    // ******  labiau skaitomas tikrinimas ir patogus, kai reikia prideti viena salyga
-    
-    // ******  kai klasiu gali buti ne viena, galima padaryti patogiau, 
-    let textClass = ''
-    // jei yra, generuojame posto teksta pagal ilgi ir fono spalva (data.js 129 eilute)
     if ( content.text) {
-        if( content.text.length < 61 && !content.img ) {
-            textClass = 'big-text'
-        }
-        if (content.background && !content.img){
-            textClass += ' background ' + content.background
-        }
-        textHTML = `<p class="${textClass}">${content.text}</p>`
+        textHTML = renderPostText( content )
     }
 
     if(content.img) {
@@ -68,6 +51,31 @@ function renderPostContent( content ) {
                 ${textHTML}
                 ${galleryHTML}
             </div>`;
+}
+// **********  toliau eina funkcijos, formuojancios "textHTML" ir "galleryHTML" **************
+
+function renderPostText( content ) {
+    let HTML = ''
+    let text = ''
+    const shortTextLength = 61
+    const maxTextLength = 350
+    let textClass = ''
+// jei yra, generuojame posto teksta pagal ilgi ir fono spalva (data.js 117 ir 130 eilute)
+    if (content.text) {
+        if( content.text.length < shortTextLength && !content.img ) {
+            textClass = 'big-text'
+        }
+        if (content.background && !content.img){
+            textClass += ' background ' + content.background
+        }
+// sustojau paskutines pamokos 2 dalies 23 minute //
+        HTML = `<p class="${textClass}">
+ 
+                    ${content.text.length > maxTextLength ? 
+                        '... <span class="more">See more</span>':content.text}
+                </p>`
+    }
+    return HTML
 }
 
 function renderPostFooter() {
