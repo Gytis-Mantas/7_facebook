@@ -127,7 +127,21 @@ const posts = [
         time: 1576592401104,
         content: {
             text: 'Trumpas tekstas didelemis raidemis su fonu RED.',
-            background: 'red'
+            background: 'red',
+        }
+    },
+	{
+        author: {
+            name: 'Petriukas',
+            surname: 'Patruškevičius',
+            img: 'pi.jpg',
+            link: '#'
+        },
+        time: 1576592401104,
+        content: {
+            text: 'Trumpas tekstas didelemis raidemis su fonu RED ir papildomos 2 nuotraukos.',
+            background: 'red',
+            img: ['img-5.jpg', 'img-6.jpg'],
         }
     },
 	{

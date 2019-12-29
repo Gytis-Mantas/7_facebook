@@ -54,7 +54,7 @@ function renderPostContent( content ) {
         if( content.text.length < 61 && !content.img ) {
             textClass = 'big-text'
         }
-        if (content.background){
+        if (content.background && !content.img){
             textClass += ' background ' + content.background
         }
         textHTML = `<p class="${textClass}">${content.text}</p>`
