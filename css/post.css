@@ -1,11 +1,195 @@
 .post{
     display: inline-block;
     width: 100%;
-    padding: 20px;
     border: 1px solid #CCC;
     border-radius: 10px;
     background-color: #f5f5f5;
 }
-.post + .post {
-    margin-top: 40px;
+    .post + .post {
+        margin-top: 40px;
+    }
+    
+.post > header {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
 }
+    .post > header > .user-image {
+        display: inline-block;
+        float: left;
+        width: 60px;
+        height: 60px;
+    }
+            .post .user-image > img {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 1px solid #CCC;
+            }
+    .post > header > .texts {
+        display: inline-block;
+        float: left;
+        width: calc(100% - 100px);
+        padding: 0 20px;
+    }
+        .post .author{
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+            .post .author > a {
+                display: inline-block;
+                line-height: 30px;
+                font-size: 20px;
+                text-decoration: none;
+            }
+        .post > header .time{
+            display: inline-block;
+            line-height: 20px;
+            font-size: 16px;
+        }
+    .post > header > .fa{
+        display: inline-block;
+        float: left;
+        width: 40px;
+        line-height: 30px;
+        text-align: center;
+    }
+.post > .content {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0;
+}
+    .post > .content > p {
+        display: inline-block;
+        width: 100%;
+        padding: 10px;
+    }
+    .post > .content > .gallery {
+        display: inline-block;
+        width: 100%;
+        height: 360px;
+        position: relative;
+        /* overflow: hidden;   nebereikia, kai funcion.js formuoja ll ilgi iki 4 foto*/
+    }
+        .post > .content > .gallery > img {
+            display: inline-block;
+            width: 100%;
+            height: 100%; 
+            float: left;
+            /* object-fit: contain; */
+            object-fit: cover;
+            object-position: center;
+        }
+        .post > .content > .gallery-2 > {
+            height: 420px;;
+            }
+            .post > .content > .gallery-2 > img {
+                width: 50%;
+            } 
+        .post > .content > .gallery-3 > {
+            height: 420px;;
+            }
+            .post > .content > .gallery-3 > img {
+                width: 50%;
+                height: 50%;
+            }
+            .post > .content > .gallery-3 > img:nth-of-type(1) {
+                width: 100%;
+            }
+
+            /* cia eiliskumas geras ir veikia gerai, bet daug rasymo ir nera races */
+            /* .post > .content > .gallery-3 > img:nth-of-type(1) {
+                width: 100%;
+                height: 50%;
+            } 
+            .post > .content > .gallery-3 > img:nth-of-type(2),
+            .post > .content > .gallery-3 > img:nth-of-type(3) {
+                width: 50%;
+                height: 50%;
+            }  */
+            .post > .content > .gallery-4 > {
+                height: 480px;
+                position: relative;
+                }
+                .post > .content > .gallery-4 > img {
+                    width: 50%;
+                    height: calc(100% / 3);
+                }
+                .post > .content > .gallery-4 > img:nth-of-type(1) {
+                    height: 100%;
+                }
+                .post > .content > .gallery-4 > .overlay {
+                    display: inline-block;
+                    width: 50%;
+                    height: calc(100% / 3);
+                    position: absolute;
+                    bottom: 0px;
+                    right: 0px;
+                    background-color: #0008;
+                    text-align: center;
+                    line-height: 160px;
+                    font-size: 80px;
+                    color: #fff;
+                }
+    .post > footer {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+}
+    .post > footer > .row {
+        display: inline-block;
+        width: 100%;
+        padding: 10px 0;
+        border-top: 1px solid #CCC;
+    }
+        .post > footer .action {
+            display: inline-block;
+            width: 50%;
+            float: left;
+            text-align: center;
+        }
+            .post .action span {
+                /* display: inline-block; */
+                margin-left: 10px;
+            }
+        .post > footer .user-photo {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            float: left;
+            margin-right: 10px;
+            border-radius: 50%;
+            border: 1px solid #CCC;
+        }
+        .post > footer form {
+            display: inline-block;
+            width: calc(100% - 50px);
+            float: left;
+            position: relative;
+        }
+            .post form > textarea{
+                display: inline-block;
+                width: 100%;
+                height: 40px;
+                padding: 10px 30px;
+                line-height: 20px;
+                border-radius: 20px;
+                border: 1px solid #CCC;
+                resize: none;
+                overflow: hidden;
+            }
+            .post form > .actions{
+                display: inline-block;
+                position: absolute;
+                bottom: 10px;
+                right: 10px;
+            }
+                .post .actions > .fa {
+                    display: inline-block;
+                    width: 22px;
+                    line-height: 20px;
+                    font-size: 16;
+                    text-align: center;
+                }
