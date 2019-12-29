@@ -4,13 +4,11 @@ function renderFeed( list ) {
     if ( Array.isArray(list) === false ) {
         return console.error('Feeda turi sudaryti sarasas(array) postu objektu (objects).')
     }
-
     for ( let i=0; i<list.length; i++ ) {
         renderPost( list[i] );
     }
-    
-    return;
-}
+    return; // "return" komanda galima išmesti, nes komanda nieko negrąžina, tik nusako funkcijos pabaigą
+}   // šiuo atveju funkcijos pabaigoje "return" būtų generuojama automatiškai
 
 function renderPost( data ) {
     let HTML = `<div class="post">
@@ -18,10 +16,9 @@ function renderPost( data ) {
                     ${renderPostContent( data.content )}
                     ${renderPostFooter()}
                 </div>`;
-    
     document.getElementById('feed').innerHTML += HTML;
-    return;
-}
+    return;  // bet vistiek geriau matosi funkcijos pabaiga, kai yra "return"
+}   // nors žemiau nebenaudosime beverčių komandų
 
 function renderPostHeader( data ) {
     return `<header>
