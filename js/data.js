@@ -113,7 +113,8 @@ const posts = [
         },
         time: 1576592401104,
         content: {
-            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+            text: 'Trumpas tekstas didelemis raidemis su fonu BLUE.',
+            background: 'blue'
         }
     },
     {
@@ -125,9 +126,21 @@ const posts = [
         },
         time: 1576592401104,
         content: {
-            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            text: 'Trumpas tekstas didelemis raidemis su fonu RED.',
             background: 'red'
         }
-    }
+    },
+	{
+        author: {
+            name: 'Usuotas',
+            surname: 'Usuotis',
+            img: 'us.jpg',
+            link: '#'
+        },
+        time: 1576592401104,
+        content: {
+            text: 'Trumpas tekstas didelemis raidemis be fono.'
+        }
+    },
 ];
 

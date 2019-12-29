@@ -40,15 +40,32 @@ function renderPostContent( content ) {
     let textHTML = '';
     let galleryHTML = '';
 
-    if(content.text) {
-        textHTML = content.text
+    // if( content.text.length < 61 && !content.img ) {
+    //     textHTML = `<p class="big-text"> ${content.text} </p>`;
+    // } else {
+    //     textHTML = `<p> ${content.text} </p>`;
+    // }   
+    // ******  labiau skaitomas tikrinimas ir patogus, kai reikia prideti viena salyga
+    
+    // ******  kai klasiu gali buti ne viena, galima padaryti patogiau, 
+    let textClass = ''
+    // jei yra, generuojame posto teksta pagal ilgi ir fono spalva (data.js 129 eilute)
+    if ( content.text) {
+        if( content.text.length < 61 && !content.img ) {
+            textClass = 'big-text'
+        }
+        if (content.background){
+            textClass += ' background ' + content.background
+        }
+        textHTML = `<p class="${textClass}">${content.text}</p>`
     }
+
     if(content.img) {
         galleryHTML = renderGallery( content.img )
     }
 
     return `<div class="content">
-                <p>${textHTML}</p>
+                ${textHTML}
                 ${galleryHTML}
             </div>`;
 }

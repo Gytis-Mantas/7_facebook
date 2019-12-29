@@ -65,7 +65,44 @@
         display: inline-block;
         width: 100%;
         padding: 10px;
+        line-height: 24px;
+        font-size: 20px;
+        position: relative;
     }
+        .post > .content > p.big-text {
+            font-size: 40px;
+            line-height: 54px;
+            text-align: center;
+        }
+        .post > .content > p.background {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+/* sitos 3 eilutes centruoja elementa tevo atzvilgiu */
+/* bet reikia dar centruoti teksta elemento viduje */
+            height: 320px;
+        }
+        
+        /* .post > .content > p > span {
+            display: inline-block;
+            width: 80%;
+            margin: 0 10%;
+            position: absolute ;
+            top: 50%;
+            transform: translate(0, -50%);
+            text-align: center;
+        } */
+        /* labai daug rasymo ir sunku susigaudyti, 
+        bet puikiai centruoja ir vertikaliai, ir horizontaliai */
+        .post > .content > p.blue {
+            background-color: #36f;
+            color: #fff;
+        }
+      .post > .content > p.red {
+            background-color: #f33;
+            color: #fff;
+        }
+
     .post > .content > .gallery {
         display: inline-block;
         width: 100%;
