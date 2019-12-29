@@ -4,13 +4,11 @@ function renderFeed( list ) {
     if ( Array.isArray(list) === false ) {
         return console.error('Feeda turi sudaryti sarasas(array) postu objektu (objects).')
     }
-
     for ( let i=0; i<list.length; i++ ) {
         renderPost( list[i] );
     }
-    
-    return;
-}
+    return; // "return" komanda galima išmesti, nes komanda nieko negrąžina, tik nusako funkcijos pabaigą
+}   // šiuo atveju funkcijos pabaigoje "return" būtų generuojama automatiškai
 
 function renderPost( data ) {
     let HTML = `<div class="post">
@@ -18,10 +16,9 @@ function renderPost( data ) {
                     ${renderPostContent( data.content )}
                     ${renderPostFooter()}
                 </div>`;
-    
     document.getElementById('feed').innerHTML += HTML;
-    return;
-}
+    return;  // bet vistiek geriau matosi funkcijos pabaiga, kai yra "return"
+}   // nors žemiau nebenaudosime beverčių komandų
 
 function renderPostHeader( data ) {
     return `<header>
@@ -43,15 +40,32 @@ function renderPostContent( content ) {
     let textHTML = '';
     let galleryHTML = '';
 
-    if(content.text) {
-        textHTML = content.text
+    // if( content.text.length < 61 && !content.img ) {
+    //     textHTML = `<p class="big-text"> ${content.text} </p>`;
+    // } else {
+    //     textHTML = `<p> ${content.text} </p>`;
+    // }   
+    // ******  labiau skaitomas tikrinimas ir patogus, kai reikia prideti viena salyga
+    
+    // ******  kai klasiu gali buti ne viena, galima padaryti patogiau, 
+    let textClass = ''
+    // jei yra, generuojame posto teksta pagal ilgi ir fono spalva (data.js 129 eilute)
+    if ( content.text) {
+        if( content.text.length < 61 && !content.img ) {
+            textClass = 'big-text'
+        }
+        if (content.background && !content.img){
+            textClass += ' background ' + content.background
+        }
+        textHTML = `<p class="${textClass}">${content.text}</p>`
     }
+
     if(content.img) {
         galleryHTML = renderGallery( content.img )
     }
 
     return `<div class="content">
-                <p>${textHTML}</p>
+                ${textHTML}
                 ${galleryHTML}
             </div>`;
 }
