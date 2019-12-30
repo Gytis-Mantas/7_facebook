@@ -36,28 +36,11 @@ function renderPostHeader( data ) {
 }
 
 function renderPostContent( content ) {
-    console.log ( content );
     let textHTML = '';
     let galleryHTML = '';
 
-    // if( content.text.length < 61 && !content.img ) {
-    //     textHTML = `<p class="big-text"> ${content.text} </p>`;
-    // } else {
-    //     textHTML = `<p> ${content.text} </p>`;
-    // }   
-    // ******  labiau skaitomas tikrinimas ir patogus, kai reikia prideti viena salyga
-    
-    // ******  kai klasiu gali buti ne viena, galima padaryti patogiau, 
-    let textClass = ''
-    // jei yra, generuojame posto teksta pagal ilgi ir fono spalva (data.js 129 eilute)
     if ( content.text) {
-        if( content.text.length < 61 && !content.img ) {
-            textClass = 'big-text'
-        }
-        if (content.background && !content.img){
-            textClass += ' background ' + content.background
-        }
-        textHTML = `<p class="${textClass}">${content.text}</p>`
+        textHTML = renderPostText( content )
     }
 
     if(content.img) {
@@ -68,6 +51,53 @@ function renderPostContent( content ) {
                 ${textHTML}
                 ${galleryHTML}
             </div>`;
+}
+// **********  toliau eina funkcijos, formuojancios "textHTML" ir "galleryHTML" **************
+
+function renderPostText( content ) {
+    let HTML = ''
+    let text = ''
+    let more = ''
+    const shortTextLength = 60
+    const maxTextLength = 380
+// jei yra, generuojame posto teksta pagal ilgi ir fono spalva (data.js 117, 130 eilute)
+let textClass = ''
+    if (content.text) {
+        if( content.text.length < shortTextLength && !content.img ) {
+            textClass = 'big-text'
+        }
+        if (content.background && !content.img){
+            textClass += ' background ' + content.background
+        }
+
+        text = content.text
+        if (content.text.length > maxTextLength){
+        // atkirpsime teksto dali iki maxTextLength (tarkim 350) simboliu
+            // for ( let i=0; i<maxTextLength; i++){
+            //     text += content.text[i]
+            // }
+            // sita eilute turetu buti ciklo analogas, bet kazkodel neveikia
+            text = content.text.slice(0, maxTextLength)
+        // nutrinsime is galo nepilnus zodzius (sakinius, kai zyme '.') ir pan.
+            let letterRemove = 0
+            for( let i=maxTextLength-12; i>0; i-- ){
+                const letter = text[i]
+                if (letter === ' ') {break}
+                letterRemove++
+            }
+            text = text.slice(0, -letterRemove-12)
+            more = '... <span class="more">See more</span>'
+        }
+
+
+        HTML = `<p class="${textClass}">
+                    ${text}${more}
+                </p>`
+                    // ${content.text.length > maxTextLength ? 
+                    //     '... <span class="more">See more</span>':content.text}
+                    // cia labai idomus "IF" analogas, reikes veliau panagrineti
+                }
+    return HTML
 }
 
 function renderPostFooter() {

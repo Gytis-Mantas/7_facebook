@@ -37,7 +37,7 @@ const posts = [
         time: 1576592401104,
         content: {
             text: 'Kalbėsime apie gyvenimo aprašymo rengimą, formalios ir neformalios socialinės medijos panaudojimą darbo paieškose, dalyvavimą darbo pokalbiuose, darbdavių keliamus lūkesčius bei rinkoje vyraujančias tendencijas, darbo užmokesčio rėžius. Aptarsime dažniausiai pasikartojančias klaidas darbo paieškos metu bei pasidalinsime patarimais, kaip jų išvengti. Paliesime svarbiausius aspektus, kuriant savo profesinį profilį, tiek bendrai, tiek konkrečiai IT rinkai. Kalbėsime apie gyvenimo aprašymo rengimą, formalios ir neformalios socialinės medijos panaudojimą darbo paieškose, dalyvavimą darbo pokalbiuose, darbdavių keliamus lūkesčius bei rinkoje vyraujančias tendencijas, darbo užmokesčio rėžius. Aptarsime dažniausiai pasikartojančias klaidas darbo paieškos metu bei pasidalinsime patarimais, kaip jų išvengti. Paliesime svarbiausius aspektus, kuriant savo profesinį profilį, tiek bendrai, tiek konkrečiai IT rinkai. Kalbėsime apie gyvenimo aprašymo rengimą, formalios ir neformalios socialinės medijos panaudojimą darbo paieškose, dalyvavimą darbo pokalbiuose, darbdavių keliamus lūkesčius bei rinkoje vyraujančias tendencijas, darbo užmokesčio rėžius. Aptarsime dažniausiai pasikartojančias klaidas darbo paieškos metu bei pasidalinsime patarimais, kaip jų išvengti. Paliesime svarbiausius aspektus, kuriant savo profesinį profilį, tiek bendrai, tiek konkrečiai IT rinkai.'
-        }
+        }			
     },
     {
         author: {
