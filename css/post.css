@@ -103,6 +103,7 @@
             color: #fff;
         }
         .post > .content > p > .more {
+            margin-left: 5px;
             color: #36f;
             cursor: pointer;
         }

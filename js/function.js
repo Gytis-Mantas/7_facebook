@@ -57,10 +57,11 @@ function renderPostContent( content ) {
 function renderPostText( content ) {
     let HTML = ''
     let text = ''
-    const shortTextLength = 61
-    const maxTextLength = 350
-    let textClass = ''
-// jei yra, generuojame posto teksta pagal ilgi ir fono spalva (data.js 117 ir 130 eilute)
+    let more = ''
+    const shortTextLength = 60
+    const maxTextLength = 380
+// jei yra, generuojame posto teksta pagal ilgi ir fono spalva (data.js 117, 130 eilute)
+let textClass = ''
     if (content.text) {
         if( content.text.length < shortTextLength && !content.img ) {
             textClass = 'big-text'
@@ -68,13 +69,34 @@ function renderPostText( content ) {
         if (content.background && !content.img){
             textClass += ' background ' + content.background
         }
-// sustojau paskutines pamokos 2 dalies 23 minute //
+
+        text = content.text
+        if (content.text.length > maxTextLength){
+        // atkirpsime teksto dali iki maxTextLength (tarkim 350) simboliu
+            // for ( let i=0; i<maxTextLength; i++){
+            //     text += content.text[i]
+            // }
+            // sita eilute turetu buti ciklo analogas, bet kazkodel neveikia
+            text = content.text.slice(0, maxTextLength)
+        // nutrinsime is galo nepilnus zodzius (sakinius, kai zyme '.') ir pan.
+            let letterRemove = 0
+            for( let i=maxTextLength-12; i>0; i-- ){
+                const letter = text[i]
+                if (letter === ' ') {break}
+                letterRemove++
+            }
+            text = text.slice(0, -letterRemove-12)
+            more = '... <span class="more">See more</span>'
+        }
+
+
         HTML = `<p class="${textClass}">
- 
-                    ${content.text.length > maxTextLength ? 
-                        '... <span class="more">See more</span>':content.text}
+                    ${text}${more}
                 </p>`
-    }
+                    // ${content.text.length > maxTextLength ? 
+                    //     '... <span class="more">See more</span>':content.text}
+                    // cia labai idomus "IF" analogas, reikes veliau panagrineti
+                }
     return HTML
 }
 
