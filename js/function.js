@@ -7,8 +7,8 @@ function renderFeed( list ) {
     for ( let i=0; i<list.length; i++ ) {
         renderPost( list[i] );
     }
-    return; // "return" komanda galima išmesti, nes komanda nieko negrąžina, tik nusako funkcijos pabaigą
-}   // šiuo atveju funkcijos pabaigoje "return" būtų generuojama automatiškai
+    return; // "return" komanda galima išmesti, kai komanda nieko negrąžina, tik nusako funkcijos pabaigą
+}   // tokiu atveju funkcijos pabaigoje "return" būtų generuojama automatiškai
 
 function renderPost( data ) {
     let HTML = `<div class="post">
@@ -17,7 +17,7 @@ function renderPost( data ) {
                     ${renderPostFooter()}
                 </div>`;
     document.getElementById('feed').innerHTML += HTML;
-    return;  // bet vistiek geriau matosi funkcijos pabaiga, kai yra "return"
+    return;  // vistiek geriau matosi funkcijos pabaiga, kai yra "return"
 }   // nors žemiau nebenaudosime beverčių komandų
 
 function renderPostHeader( data ) {
@@ -38,22 +38,19 @@ function renderPostHeader( data ) {
 function renderPostContent( content ) {
     let textHTML = '';
     let galleryHTML = '';
-
     if ( content.text) {
         textHTML = renderPostText( content )
     }
-
     if(content.img) {
         galleryHTML = renderGallery( content.img )
     }
-
     return `<div class="content">
                 ${textHTML}
                 ${galleryHTML}
             </div>`;
 }
-// **********  toliau eina funkcijos, formuojancios "textHTML" ir "galleryHTML" **************
 
+// **********  toliau eina funkcijos, formuojancios "textHTML" ir "galleryHTML" **************
 function renderPostText( content ) {
     let HTML = ''
     let text = ''
