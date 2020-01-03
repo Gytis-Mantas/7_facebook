@@ -1,5 +1,20 @@
  "use strict";
 
+function getPosts ( callback ){
+     const API = 'https://gytis-mantas.github.io/7_facebook/js/posts.json'
+    console.log("darome uzklausa gauti duomenis...")
+    
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+        // 4 ir 200 yra standartinis atsakymas, kad duomenys yra gauti ir jie teisingi
+            callback (xhttp.responseText);
+        }
+    };
+    xhttp.open("GET", API, true); //"true" asinchroninis, kai nestabdo, kol laukia duomenu
+    xhttp.send();
+}
+
 function renderFeed( list ) {
     if ( Array.isArray(list) === false ) {
         return console.error('Feeda turi sudaryti sarasas(array) postu objektu (objects).')
