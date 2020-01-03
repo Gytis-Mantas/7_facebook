@@ -16,17 +16,26 @@ function getPosts ( callback ){
 }
 
 function renderFeed( list ) {
-    list = JSON.parse(list)
-    console.log(list);
-    
-    if ( Array.isArray(list) === false ) {
+        if ( Array.isArray(list) === false ) {
         return console.error('Feeda turi sudaryti sarasas(array) postu objektu (objects).')
     }
     for ( let i=0; i<list.length; i++ ) {
         renderPost( list[i] );
     }
-    return; // "return" komanda galima išmesti, kai komanda nieko negrąžina, tik nusako funkcijos pabaigą
-}   // tokiu atveju funkcijos pabaigoje "return" būtų generuojama automatiškai
+    // sudedame ant visu "See more" elementu "click" event'a
+    const seeMore = document.querySelectorAll('.post > .content > p > .more')
+
+    for ( let i=0; i<seeMore.length; i++){
+        const element = seeMore[i]
+        element.addEventListener('click', onSeeMoreClick)
+    }
+}   // kai funkcijos pabaigoje nera "return", jis generuojama automatiškai
+
+function onSeeMoreClick( event ){
+    const content = (event.target.closest('.content'));
+    content.querySelector('p.hidden').classList.remove('hidden')
+    content.querySelector('p').classList.add('hidden')
+}
 
 function renderPost( data ) {
     let HTML = `<div class="post">
@@ -74,7 +83,7 @@ function renderPostText( content ) {
     let text = ''
     let more = ''
     const shortTextLength = 60
-    const maxTextLength = 380
+    const maxTextLength = 350
 // jei yra, generuojame posto teksta pagal ilgi ir fono spalva (data.js 117, 130 eilute)
 let textClass = ''
     if (content.text) {
@@ -88,12 +97,8 @@ let textClass = ''
         text = content.text
         if (content.text.length > maxTextLength){
         // atkirpsime teksto dali iki maxTextLength (tarkim 350) simboliu
-            // for ( let i=0; i<maxTextLength; i++){
-            //     text += content.text[i]
-            // }
-            // sita eilute turetu buti ciklo analogas, bet kazkodel man neveikia
             text = content.text.slice(0, maxTextLength)
-        // nutrinsime is galo nepilnus zodzius (sakinius, kai zyme '.') ir pan.
+        // nutrinsime is galo nepilnus zodzius iki tarpo ' ' (ar sakinius, kai zyme '.')
             let letterRemove = 0
             for( let i=maxTextLength-12; i>0; i-- ){
                 const letter = text[i]
@@ -104,14 +109,13 @@ let textClass = ''
             more = '... <span class="more">See more</span>'
         }
 
-
-        HTML = `<p class="${textClass}">
-                    ${text}${more}
-                </p>`
-                    // ${content.text.length > maxTextLength ? 
-                    //     '... <span class="more">See more</span>':content.text}
-                    // cia labai idomus "IF" analogas, reikes veliau panagrineti
-                }
+        HTML = `<p class="${textClass}"> ${text}${more} </p>`
+        if ( more !== '' ) {
+            HTML += `<p class="${textClass} hidden"> 
+                ${content.text} 
+            </p>`
+        }
+    }
     return HTML
 }
 

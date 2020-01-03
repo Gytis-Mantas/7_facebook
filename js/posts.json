@@ -6,7 +6,7 @@
             "img": "ag.jpg",
             "link": "#"
         },
-        "time": 1578064962659,
+        "time": 1580000000000,
         "content": {
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis."
         }
@@ -18,7 +18,7 @@
             "img": "al.jpg",
             "link": "#"
         },
-        "time": 1578063862659,
+        "time": 1578066860000,
         "content": {
             "text": "Kalbėsime apie gyvenimo aprašymo rengimą, formalios ir neformalios socialinės medijos panaudojimą darbo paieškose, dalyvavimą darbo pokalbiuose, darbdavių keliamus lūkesčius bei rinkoje vyraujančias tendencijas, darbo užmokesčio rėžius. Aptarsime dažniausiai pasikartojančias klaidas darbo paieškos metu bei pasidalinsime patarimais, kaip jų išvengti. Paliesime svarbiausius aspektus, kuriant savo profesinį profilį, tiek bendrai, tiek konkrečiai IT rinkai. Kalbėsime apie gyvenimo aprašymo rengimą, formalios ir neformalios socialinės medijos panaudojimą darbo paieškose, dalyvavimą darbo pokalbiuose, darbdavių keliamus lūkesčius bei rinkoje vyraujančias tendencijas, darbo užmokesčio rėžius. Aptarsime dažniausiai pasikartojančias klaidas darbo paieškos metu bei pasidalinsime patarimais, kaip jų išvengti. Paliesime svarbiausius aspektus, kuriant savo profesinį profilį, tiek bendrai, tiek konkrečiai IT rinkai. Kalbėsime apie gyvenimo aprašymo rengimą, formalios ir neformalios socialinės medijos panaudojimą darbo paieškose, dalyvavimą darbo pokalbiuose, darbdavių keliamus lūkesčius bei rinkoje vyraujančias tendencijas, darbo užmokesčio rėžius. Aptarsime dažniausiai pasikartojančias klaidas darbo paieškos metu bei pasidalinsime patarimais, kaip jų išvengti. Paliesime svarbiausius aspektus, kuriant savo profesinį profilį, tiek bendrai, tiek konkrečiai IT rinkai."
         }			
@@ -30,7 +30,7 @@
             "img": "an.jpg",
             "link": "#"
         },
-        "time": 1578062862659,
+        "time": 1578065860000,
         "content": {
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             "img": ["img-1.jpg"]
@@ -43,7 +43,7 @@
             "img": "il.jpg",
             "link": "#"
         },
-        "time": 1578053862659,
+        "time": 1578033862659,
         "content": {
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             "img": ["img-5.jpg", "img-6.jpg"]
@@ -69,7 +69,7 @@
             "img": "ke.jpg",
             "link": "#"
         },
-        "time": 1576592401104,
+        "time": 1575592401104,
         "content": {
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             "img": ["bac-1.jpg", "bac-2.jpg", "bac-3.jpg", "bac-4.jpg"]
@@ -95,7 +95,7 @@
             "img": "pe.jpg",
             "link": "#"
         },
-        "time": 1566592401104,
+        "time": 1560592401104,
         "content": {
             "text": "Trumpas tekstas didelemis raidemis su fonu BLUE.",
             "background": "blue"
@@ -116,12 +116,12 @@
     },
 	{
         "author": {
-            "name": "Petriukas",
-            "surname": "Patruškevičius",
-            "img": "pi.jpg",
+            "name": "Plikis",
+            "surname": "Plikaitis",
+            "img": "pl.jpg",
             "link": "#"
         },
-        "time": 1576592401104,
+        "time": 1506592401104,
         "content": {
             "text": "Trumpas tekstas didelemis raidemis su fonu RED ir papildomos 2 nuotraukos.",
             "background": "red",
@@ -135,7 +135,7 @@
             "img": "us.jpg",
             "link": "#"
         },
-        "time": 1576592401104,
+        "time": 1476592401104,
         "content": {
             "text": "Trumpas tekstas didelemis raidemis be fono."
         }
