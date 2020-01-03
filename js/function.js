@@ -8,7 +8,7 @@ function getPosts ( callback ){
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
         // 4 ir 200 yra standartinis atsakymas, kad duomenys yra gauti ir jie teisingi
-            callback (xhttp.responseText);
+            callback (JSON.parse(xhttp.responseText));
         }
     };
     xhttp.open("GET", API, true); //"true" asinchroninis, kai nestabdo, kol laukia duomenu
@@ -16,6 +16,9 @@ function getPosts ( callback ){
 }
 
 function renderFeed( list ) {
+    list = JSON.parse(list)
+    console.log(list);
+    
     if ( Array.isArray(list) === false ) {
         return console.error('Feeda turi sudaryti sarasas(array) postu objektu (objects).')
     }
