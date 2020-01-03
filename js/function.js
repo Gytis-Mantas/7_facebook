@@ -29,7 +29,7 @@ function renderPostHeader( data ) {
             <div class="author">
                 <a href="#">${data.author.name} ${data.author.surname}</a>
             </div>
-            <span class="time">${data.time} </span>
+            <span class="time">${formatDate(data.time)} </span>
         </div>
         <i class="fa fa-ellipsis-h"></i>
     </header>`;
@@ -76,7 +76,7 @@ let textClass = ''
             // for ( let i=0; i<maxTextLength; i++){
             //     text += content.text[i]
             // }
-            // sita eilute turetu buti ciklo analogas, bet kazkodel neveikia
+            // sita eilute turetu buti ciklo analogas, bet kazkodel man neveikia
             text = content.text.slice(0, maxTextLength)
         // nutrinsime is galo nepilnus zodzius (sakinius, kai zyme '.') ir pan.
             let letterRemove = 0
@@ -139,27 +139,45 @@ function renderGallery( list ){
         HTML += `<div class="overlay">+${ll - size}</div>`
     }
     return `<div class="gallery gallery-${size}">${HTML}</div>`;
-} // patogesne, bet ne tokia gera, kaip paskutiniame pavyzdyje
+} 
 
-// veikianti patikrinta galerijos formavimo funkcija, tik neformatuoja foto pagal dydi
-// function renderGallery( list ){
-//     console.log(list)
-//     let HTML = ''
-//         for ( let i = 0; i<list.length; i++){
-//             HTML += `<img src= "./img/posts/${list[i]}">`
-//         }
-
-//     return HTML
-// }
-
-
-// veikianti patikrinta galerijos formavimo funkcija, jau uzdaryta i <div>
-// function renderGallery( list ){
-//     let HTML = '<div class="gallery">';
-//         for ( let i = 0; i<list.length; i++){
-//             HTML += `<img src= "./img/posts/${list[i]}">`
-//         }
-//     HTML +='</div>'    
-//     return HTML
-// }
-
+function formatDate( timestamp ){
+    const now = Date.now()
+    const timeInSec = Math.floor((now - timestamp) / 1000)
+    const timeInMin = Math.floor( timeInSec / 60)
+    const timeInHour = Math.floor( timeInMin / 60)
+    const timeInDays = Math.floor( timeInHour / 24)
+    const timeInWeeks = Math.floor( timeInDays / 7)
+    const timeInMonth = Math.floor( timeInDays / 30)
+    const timeInYears = Math.floor( timeInDays / 365)
+    // just now     -> 0..15s
+    if ( timeInSec < 16 ){
+        return "Just now"
+    }
+    // [xx] sec       -> 16..59s
+    if ( timeInSec < 60 ){
+        return timeInSec+" s ago"
+    }
+    // [xx] min         -> 1..59min
+    if ( timeInMin < 60 ){
+        return (timeInMin)+" min ago"
+    }
+    // [xx] hour        -> 1..24h
+    if ( timeInHour < 24 ){
+        return (timeInHour)+" hours ago"
+    }
+    // [xx] days        -> 1..14days
+    if ( timeInDays < 14 ){
+        return (timeInDays)+" days ago"
+    }
+    // [xx] weeks        -> 15..35days
+    if ( timeInDays < 35 ){
+        return (timeInWeeks)+" weeks ago"
+    }
+    // [xx] months      -> 35..365days
+    if ( timeInDays < 365 ){
+        return (timeInMonth)+" months ago"
+    }
+    // [xx] years       -> 365..Infinity days
+        return (timeInYears)+" years ago"
+}

@@ -22,7 +22,7 @@ const posts = [
             img: 'ag.jpg',
             link: '#'
         },
-        time: 1576592401104,
+        time: 1578037716966,
         content: {
             text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis.'
         }
@@ -34,7 +34,7 @@ const posts = [
             img: 'al.jpg',
             link: '#'
         },
-        time: 1576592401104,
+        time: 1578037706966,
         content: {
             text: 'Kalbėsime apie gyvenimo aprašymo rengimą, formalios ir neformalios socialinės medijos panaudojimą darbo paieškose, dalyvavimą darbo pokalbiuose, darbdavių keliamus lūkesčius bei rinkoje vyraujančias tendencijas, darbo užmokesčio rėžius. Aptarsime dažniausiai pasikartojančias klaidas darbo paieškos metu bei pasidalinsime patarimais, kaip jų išvengti. Paliesime svarbiausius aspektus, kuriant savo profesinį profilį, tiek bendrai, tiek konkrečiai IT rinkai. Kalbėsime apie gyvenimo aprašymo rengimą, formalios ir neformalios socialinės medijos panaudojimą darbo paieškose, dalyvavimą darbo pokalbiuose, darbdavių keliamus lūkesčius bei rinkoje vyraujančias tendencijas, darbo užmokesčio rėžius. Aptarsime dažniausiai pasikartojančias klaidas darbo paieškos metu bei pasidalinsime patarimais, kaip jų išvengti. Paliesime svarbiausius aspektus, kuriant savo profesinį profilį, tiek bendrai, tiek konkrečiai IT rinkai. Kalbėsime apie gyvenimo aprašymo rengimą, formalios ir neformalios socialinės medijos panaudojimą darbo paieškose, dalyvavimą darbo pokalbiuose, darbdavių keliamus lūkesčius bei rinkoje vyraujančias tendencijas, darbo užmokesčio rėžius. Aptarsime dažniausiai pasikartojančias klaidas darbo paieškos metu bei pasidalinsime patarimais, kaip jų išvengti. Paliesime svarbiausius aspektus, kuriant savo profesinį profilį, tiek bendrai, tiek konkrečiai IT rinkai.'
         }			
@@ -46,7 +46,7 @@ const posts = [
             img: 'an.jpg',
             link: '#'
         },
-        time: 1576592401104,
+        time: 1578037516966,
         content: {
             text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             img: ['img-1.jpg']
@@ -59,7 +59,7 @@ const posts = [
             img: 'il.jpg',
             link: '#'
         },
-        time: 1576592401104,
+        time: 1578035716966,
         content: {
             text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             img: ['img-5.jpg', 'img-6.jpg']
@@ -72,7 +72,7 @@ const posts = [
             img: 'jo.jpg',
             link: '#'
         },
-        time: 1576592401104,
+        time: 1577750524871,
         content: {
             text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             img: ['nature-1.jpg', 'nature-2.jpg', 'nature-3.jpg']
@@ -85,7 +85,7 @@ const posts = [
             img: 'ke.jpg',
             link: '#'
         },
-        time: 1576592401104,
+        time: 1577702524871,
         content: {
             text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             img: ['bac-1.jpg', 'bac-2.jpg', 'bac-3.jpg', 'bac-4.jpg']
@@ -98,7 +98,7 @@ const posts = [
             img: 'ma.jpg',
             link: '#'
         },
-        time: 1576592401104,
+        time: 1577052524871,
         content: {
             text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             img: ['agne.jpg', 'alfonsas.jpg', 'andrius.jpg', 'ilgas.jpg', 'jonas.jpg', 'keistuolis.jpg', 'maryte.jpg', 'petras.jpg', 'petriukas.jpg','plikis.jpg', 'usuotis.jpg']
@@ -111,7 +111,7 @@ const posts = [
             img: 'pe.jpg',
             link: '#'
         },
-        time: 1576592401104,
+        time: 1570752524871,
         content: {
             text: 'Trumpas tekstas didelemis raidemis su fonu BLUE.',
             background: 'blue'
@@ -124,7 +124,7 @@ const posts = [
             img: 'pi.jpg',
             link: '#'
         },
-        time: 1576592401104,
+        time: 1567752524871,
         content: {
             text: 'Trumpas tekstas didelemis raidemis su fonu RED.',
             background: 'red',
@@ -137,7 +137,7 @@ const posts = [
             img: 'pi.jpg',
             link: '#'
         },
-        time: 1576592401104,
+        time: 1477752524871,
         content: {
             text: 'Trumpas tekstas didelemis raidemis su fonu RED ir papildomos 2 nuotraukos.',
             background: 'red',
@@ -151,7 +151,7 @@ const posts = [
             img: 'us.jpg',
             link: '#'
         },
-        time: 1576592401104,
+        time: 1377752524871,
         content: {
             text: 'Trumpas tekstas didelemis raidemis be fono.'
         }
